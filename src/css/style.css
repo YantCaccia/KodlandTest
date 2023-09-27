@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "mainTitleFont";
+    src:url("../fonts/NickTitling.ttf");
+}
+
+@font-face {
+    font-family: "bodyFont";
+    src:url("../fonts/AristotelicaSmallCaps-Regular.ttf");
+}
+
+body {
+    font-family: bodyFont;
+    height: 100vh;
+    margin: 0;
+}
+
+button {
+    font-family: "mainTitleFont";
+    padding: 1vh 5vw;
+    border: none;
+}
+
+.button--big {
+    background-color: rgb(178, 250, 108);
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+.button--little {
+    background-color: rgb(254, 127, 32);
+}
+
+.container {
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 1.5fr 1.5fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "container__mainBanner container__mainBanner container__mainBanner"
+        "container__whatIsPopText container__whatIsPopText container__whatIsPopText"
+        "container__choosePop container__choosePop container__choosePop"
+        "container__gameRules container__gameRules container__gameRules"
+        "container__footer container__footer container__footer";
+}
+
+.container__children {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.container__mainBanner {
+    height: 50vh;
+    background-image: url('../img/background2.png');
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: rgb(252, 47, 32);
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 1.3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "container__mainBanner__goToHome container__mainBanner__links container__mainBanner__links"
+        "container__mainBanner__text container__mainBanner__text container__mainBanner__image"
+        "container__mainBanner__text container__mainBanner__text container__mainBanner__image";
+    grid-area: container__mainBanner;
+}
+
+.container__mainBanner__goToHome {
+    grid-area: container__mainBanner__goToHome;
+}
+
+.container__mainBanner__links {
+    grid-area: container__mainBanner__links;
+    text-align: right;
+}
+
+.links--asText {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.container__mainBanner__links * {
+    margin-right: 5vw;
+}
+
+.container__mainBanner__image {
+    grid-area: container__mainBanner__image;
+}
+
+.container__mainBanner__text {
+    grid-area: container__mainBanner__text;
+    text-align: left;
+    margin-left: 20%;
+}
+
+.container__mainBanner__text__mainTitle {
+    font-family: mainTitleFont;
+    font-size: 12vh;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.container__mainBanner__text__description {
+    margin-right: 50%;
+}
+
+.container__whatIsPopText {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "container__whatIsPopText__title container__whatIsPopText__title container__whatIsPopText__title"
+        "container__whatIsPopText__text container__whatIsPopText__text container__whatIsPopText__text"
+        "container__whatIsPopText__text container__whatIsPopText__text container__whatIsPopText__text";
+    grid-area: container__whatIsPopText;
+}
+
+.container__whatIsPopText__title {
+    grid-area: container__whatIsPopText__title;
+}
+
+.container__whatIsPopText__text {
+    grid-area: container__whatIsPopText__text;
+}
+
+.container__whatIsPopText__text__paragraph {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.container__choosePop {
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: rgb(178, 250, 108);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "container__choosePop__title container__choosePop__title container__choosePop__title"
+        "container__choosePop__first container__choosePop__second container__choosePop__third"
+        "container__choosePop__first container__choosePop__second container__choosePop__third";
+    grid-area: container__choosePop;
+}
+
+.container__choosePop__title {
+    grid-area: container__choosePop__title;
+}
+
+.container__choosePop__first {
+    grid-area: container__choosePop__first;
+}
+
+.container__choosePop__second {
+    grid-area: container__choosePop__second;
+}
+
+.container__choosePop__third {
+    grid-area: container__choosePop__third;
+}
+
+.container__gameRules {
+    height: 40vh;
+    background-image: url('../img/bg-grid2.png');
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "container__gameRules__title container__gameRules__title container__gameRules__image"
+        "container__gameRules__text container__gameRules__text container__gameRules__image"
+        "container__gameRules__text container__gameRules__text container__gameRules__image";
+    grid-area: container__gameRules;
+}
+
+.container__gameRules__image {
+    grid-area: container__gameRules__image;
+    display: flex;
+    align-items: center;
+}
+
+.container__gameRules__title {
+    grid-area: container__gameRules__title;
+    text-align: left;
+    margin-left: 5%
+}
+
+.container__gameRules__text {
+    grid-area: container__gameRules__text;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.container__footer {
+    /* height: 50vh; */
+    background-color: rgb(51, 51, 51);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "container__footer__goToHome container__footer__links container__footer__links";
+    grid-area: container__footer;
+}
+
+.container__footer * {
+    color: white;
+}
+
+.container__footer__goToHome {
+    margin-left: 4vw;
+    text-align: left;
+    width: 30%;
+}
+
+.container__footer__links {
+    text-align: right;
+    margin-right: 4vw;
+}
+
+.container__footer__links * {
+    margin-right: 3%;
+    margin-left: 3%;
+}
